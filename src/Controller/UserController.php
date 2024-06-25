@@ -14,7 +14,7 @@ class UserController extends AbstractController
         // get the user information and notifications somehow
         $userFirstName = '...';
         $userNotifications = ['...', '...'];
-        $userContacts = ['Manon'];
+        $userContacts = ['Manon', 'Killian', 'Jeremy'];
 
         // the template path is the relative file path from `templates/`
         return $this->render('user/notifications.html.twig', [
