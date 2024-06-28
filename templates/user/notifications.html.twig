@@ -1,5 +1,13 @@
-<h1>Hello {{ user_first_name }}!</h1>
-<p>You have {{ notifications|length }} new notifications.</p>
+<h1>Bonjour {{ user_first_name }}!</h1>
+
+<h3>Vos notifications :</h3>
+<p>vous avez {{ notifications|length }} nouvelles notifications.</p>
+
+<ul>
+    {% for notification in notifications %}
+    <li>{{notification}}</li>
+    {% endfor %}
+</ul>
 
 <h3><strong>Liste des contacts :</strong></h3>
 <ul>

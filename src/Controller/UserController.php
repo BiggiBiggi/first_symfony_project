@@ -16,7 +16,7 @@ class UserController extends AbstractController
             [
                 'userFirstName' => '...',
                 'userNotifications' => ['...', '...'],
-                'userContacts' => ['manon', 'kILLIAN', 'Jeremy'],
+                'userContacts' => ['...', '...', '...'],
             ]
         ];
 
