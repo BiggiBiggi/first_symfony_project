@@ -1,16 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GOTController!{% endblock %}
+{% block title %}Fiche de personnage :
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+            background: black;
+            border: 2px, solid, white;
+            border-radius: 10px;
+            padding: 15px;
+		}
+        .character-image {
+            border-radius: 50%;
+            width: 200px;
+            align: right;
+        }
+        .text {
+            color: white;
+        }
+	</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<div class="example-wrapper">
 
-    
-</div>
+		<h2 class="text"><U>Fiche de {{ character['fullName'] }} :</U></h2>
+		<img class="character-image" src={{character['imageUrl']}}>
+        <h4 class="text">Informations:</h4>
+        <ul>
+            <li class="text" >Prénom et Nom : {{character['fullName']}}</li>
+            <li class="text" >Titre : {{character['title']}}</li>
+            <li class="text" >Famille : {{character['family']}}</li>
+        </ul>
+        <p class="text">Cliquer <a class="text" target="_blank" href="https://fr.wikipedia.org/wiki/{{fiche_perso}}">ici</a> pour visiter sa page Wikipédia</p>
+
+	</div>
 {% endblock %}
